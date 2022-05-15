@@ -4,6 +4,7 @@
   #:use-module (guix gexp)
   #:use-module (guix packages)
   #:use-module (guix utils)
+  #:use-module (srfi srfi-1)
   #:export (more-corrupt-linux))
 
 (define (more-linux-urls version)

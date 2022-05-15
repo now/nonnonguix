@@ -1,23 +1,9 @@
 (define-module (nonnongnu packages linux)
-  #:use-module (gnu packages)
-  #:use-module (gnu packages base)
-  #:use-module (gnu packages compression)
-  #:use-module (guix licenses)
+  #:use-module (gnu packages linux)
+  #:use-module (guix download)
+  #:use-module (guix gexp)
   #:use-module (guix packages)
   #:use-module (guix utils)
-  #:use-module (guix download)
-  #:use-module (guix git-download)
-  #:use-module (guix build-system copy)
-  #:use-module (guix build-system gnu)
-  #:use-module (guix build-system linux-module)
-  #:use-module (guix build-system trivial)
-  #:use-module (ice-9 match)
-;;  #:use-module (gnu packages linux)
-;;  #:use-module (guix download)
-  #:use-module (guix gexp)
-  #:use-module (guix build utils)
-;;  #:use-module (guix packages)
-;;  #:use-module (guix utils)
   #:export (more-corrupt-linux))
 
 (define (more-linux-urls version)
@@ -40,7 +26,7 @@
     (description
      "The unmodified Linux kernel, including nonfree blobs, for running Guix
 System on hardware which requires nonfree software to function, including mt7921e.")
-    (native-imports
+    (native-inputs
      `(("kconfig" ,(search-auxiliary-file "linux/5.17-x86_64.conf"))
        ,@(alist-delete "kconfig" (package-native-inputs freedo))))))
 

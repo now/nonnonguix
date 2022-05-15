@@ -9,6 +9,7 @@
   (operating-system
     (inherit installation-os)
     (kernel more-linux)
-    (firmware (list linux-firmware))))
+    (firmware (list linux-firmware))
+    (initrd-modules (cons "sata_nv" %base-initrd-modules))))
 
 installation-os-more-nonfree

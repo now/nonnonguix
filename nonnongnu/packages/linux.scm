@@ -3,7 +3,6 @@
   #:use-module (guix gexp)
   #:use-module (guix build utils)
   #:use-module (guix utils)
-  #:use-module (nongnu packages linux)
   #:export (more-corrupt-linux))
 
 (define (more-linux-urls version)
@@ -35,3 +34,5 @@ System on hardware which requires nonfree software to function, including mt7921
    linux-libre-5.17
    "5.17.5"
    "11z95wsgmj97pg77yck26l0383gncbla0zwpzv4gjdj4p62x3g4v"))
+
+(define-public more-linux more-linux-5.17)

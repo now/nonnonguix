@@ -1,5 +1,6 @@
 (define-module (nonnongnu packages linux)
   #:use-module (gnu packages linux)
+  #:use-module (guix build-system)
   #:use-module (guix gexp)
   #:use-module (guix build utils)
   #:use-module (guix packages)

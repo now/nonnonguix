@@ -27,7 +27,7 @@
      "The unmodified Linux kernel, including nonfree blobs, for running Guix
 System on hardware which requires nonfree software to function, including mt7921e.")
     (native-inputs
-     `(("kconfig" ,(search-auxiliary-file "linux/5.17-x86_64.conf"))
+     `(("kconfig" ,(local-file "aux-files/linux/5.17-x86_64.conf"))
        ,@(alist-delete "kconfig" (package-native-inputs freedo))))))
 
 (define-public more-linux-5.17

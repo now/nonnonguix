@@ -2,6 +2,7 @@
   #:use-module (gnu packages linux)
   #:use-module (guix gexp)
   #:use-module (guix build utils)
+  #:use-module (guix packages)
   #:use-module (guix utils)
   #:export (more-corrupt-linux))
 
